@@ -11,10 +11,20 @@ const SearchBar = ({ setMovies, setLoading, setError }) => {
     setError(null);
 
     try {
+
       const response = await axios.get(
-        `http://www.omdbapi.com/?i=tt3896198&apikey=9267ac53`
+        `http://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=9267ac53`
       );
-      setMovies(response.data.Search || []);
+
+      
+      console.log(response.data);
+
+      if (response.data.Response === 'True') {
+        setMovies(response.data.Search || []);
+      } else {
+        setMovies([]);
+        setError('No movies found.');
+      }
     } catch (error) {
       setError('Failed to fetch movies.');
     } finally {
