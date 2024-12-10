@@ -15,13 +15,10 @@ function App() {
       <div className="app">
         <header>
           <h1>Movie Search App</h1>
-          <nav>
-            <Link to="/">Home</Link>
-          </nav>
-        </header>
+                  </header>
 
         <Routes>
-          {/* Home Page */}
+          {}
           <Route
             exact
             path="/"

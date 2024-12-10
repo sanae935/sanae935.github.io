@@ -1,25 +1,33 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
 }
 
-
 body {
   background-color: #e0add3;
   color: #333;
-  font-family: 'Arial', sans-serif;
-  padding: 20px;
+  padding: 0;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
   color: #2c3e50;
   font-size: 3rem;
   margin-bottom: 20px;
 }
 
+.search-bar {
+  display: flex;
+  justify-content: center; /* Center form horizontally */
+  align-items: center; /* Center form vertically */
+  flex-direction: column; /* Stack input and button vertically */
+}
 
 input[type="text"] {
   padding: 10px;
@@ -27,7 +35,8 @@ input[type="text"] {
   font-size: 1rem;
   border-radius: 5px;
   border: 1px solid #ccc;
-  width: 300px;
+  width: 300px; /* Width for input */
+  margin-bottom: 10px; /* Space between input and button */
 }
 
 button {
@@ -38,12 +47,12 @@ button {
   color: white;
   font-size: 1rem;
   cursor: pointer;
+  width: 320px; /* Match the width of the input */
 }
 
 button:hover {
   background-color: #2980b9;
 }
-
 
 .movie-list {
   display: grid;
@@ -69,7 +78,6 @@ button:hover {
 .movie-card img {
   width: 100%;
   border-radius: 10px;
-  align-items: center;
 }
 
 .movie-card h3 {
@@ -82,12 +90,9 @@ button:hover {
   color: #7f8c8d;
 }
 
-
-.loading, .error {
+.loading,
+.error {
   text-align: center;
   font-size: 1.5rem;
   color: #e74c3c;
 }
-
-
-
