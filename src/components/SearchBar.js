@@ -12,7 +12,7 @@ const SearchBar = ({ setMovies, setLoading, setError }) => {
 
     try {
       const response = await axios.get(
-        `https://www.omdbapi.com/?s=${query}&apikey=your_api_key`
+        `http://www.omdbapi.com/?i=tt3896198&apikey=9267ac53`
       );
       setMovies(response.data.Search || []);
     } catch (error) {
